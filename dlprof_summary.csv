@@ -1,0 +1,45 @@
+System Config
+GPU Count,4
+GPU Name(s),NVIDIA A100-SXM4-40GB, NVIDIA A100-SXM4-40GB, NVIDIA A100-SXM4-40GB, NVIDIA A100-SXM4-40GB
+CPU Model,AMD EPYC 7402 24-Core Processor
+GPU Driver Version,510.47.03
+Framework,PyTorch 1.11.0a0+b6df043
+CUDA Version,11.6
+cuDNN Version,8.3.0
+NSys Version,2021.3.2.4-027534f
+DLProf Version,v1.7.0 / r21.11
+DLProf Build,28499851
+
+Summary Report
+Wall Clock Time (ns),46915098532
+Tensor Core Kernel Utilization %,35.4
+GPU Utilization %,0.1
+Tensor Core Kernel Duration %,0.0
+Non-Tensor Core Kernel Duration %,0.1
+Memory Duration %,0.0
+Dataloader Duration %,21.9
+IO Duration %,0.0
+CPU Duration %,1.0
+Other Duration %,76.9
+
+Iterations
+Total Iterations,939
+Aggregated Iterations,201
+Start Iteration,200
+Stop Iteration,400
+Average Iteration Time (ns),233408450.4
+Iteration Time Standard Deviation,13499191.3
+
+All Ops
+,GPU Time (ns),CPU Time (ns),# Ops
+All ops,271084077,43296257869,141
+Ops using TC,92129928,285544010,7
+Ops eligible for TC but not using,33570465,536192545,2
+All other ops,145383684,42474521314,132
+
+All Kernels
+,GPU Time (ns),CPU Time (ns),# Kernels
+All kernels,271084077,410719763,22
+Kernels using TC,43847528,14730656,3
+Memory,5703184,23598697,2
+All other kernels,221533365,372390410,17

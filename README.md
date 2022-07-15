@@ -14,6 +14,13 @@ ml load Apptainer-Tools
 apptainer pull docker://nvcr.io/nvidia/pytorch:21.11-py3
 ```
 
+If you want to enable `tensorboardX` for logging then pip install in the PyTorch NGC container as
+```
+apptainer run pytorch-21.11-py3.sif
+pip install tensorboardX
+
+```
+
 
 ## Code Additions 
 
