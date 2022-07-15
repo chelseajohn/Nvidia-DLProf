@@ -1,10 +1,12 @@
-This repository contains initial setup and how to use [DLProf] with PyTorch NGC (https://docs.nvidia.com/deeplearning/frameworks/dlprof-user-guide/) on [JUWELS](https://apps.fz-juelich.de/jsc/hps/juwels/configuration.html) for a vanilla CNN on MNIST data
+This repository contains initial setup instructions to use [DLProf](https://docs.nvidia.com/deeplearning/frameworks/dlprof-user-guide/) with PyTorch NGC on [JUWELS](https://apps.fz-juelich.de/jsc/hps/juwels/configuration.html) for a MNIST PyTorch example. 
 
-Deep Learning Profiler (DLProf) is profiling tool for deep learning models. It has two parts CLI and Viewer.T
+**Disclaimer** : This repository is intended to be only the first step in exploring DLProf
+
+**Deep Learning Profiler(DLProf)** is profiling tool for deep learning models. It has two parts CLI and Viewer:
 - The CLI (dlprof) uses Nsight Systems profiler under the hood to aggregate and correlate CPU AND GPU profiling data from training run. It is able to give Tensor Core usage for operations and kernerls as well as provide recommendations via Expert Systems for identified performance issues.
 - The Viewer (dlprofviewer) provides visualization for the data from DLProf CLI.
 
-# Setup 
+## Setup 
 
 Execute the following steps in JUWELS to pull the PyTorch NGC container :
 ```
@@ -13,7 +15,7 @@ apptainer pull docker://nvcr.io/nvidia/pytorch:21.11-py3
 ```
 
 
-# Code Additions 
+## Code Additions 
 
 The `mnist_train.py` contains the following additions to use DLProf
 
@@ -33,7 +35,7 @@ The `mnist_train.py` contains the following additions to use DLProf
     ```
 
 
-# Run DLProf inside PyTorch NGC
+## Run DLProf inside PyTorch NGC
 
 Execute the `jobscript.sh` after modifying the `SBATCH` variables as :
 
@@ -55,7 +57,7 @@ The following files are created:
 Additionaly in the output log you can see the Expert Systems Feedback.
 
 
-# Using a Python Virtual Envirionment to use DLProf Viewer
+## Using a Python Virtual Envirionment to use DLProf Viewer
 
 In JUWELS you need to set up a python venv to launch the DLProf Viewer. It can be done as follows:
 
@@ -66,7 +68,7 @@ pip install nvidia-pyindex
 pip install nvidia-dlprofviewer
 
 ```
-Launch the dlprofviewer 
+Launch the DLProf Viewer
 
 ```
 dlprofviewer dlprof_dldb.sqlite 
