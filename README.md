@@ -64,7 +64,7 @@ The following files are created:
 Additionaly in the output log you can see the Expert Systems Feedback.
 
 
-## Using a Python Virtual Envirionment to use DLProf Viewer
+## Using a Python Virtual Envirionment to launch DLProf Viewer
 
 In JUWELS you need to set up a python venv to launch the DLProf Viewer. It can be done as follows:
 
